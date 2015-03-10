@@ -27,3 +27,4 @@ markdown: redcarpet
 pygments: true
 markdown_ext: ignoreme
 
+exclude: ["publish"]
