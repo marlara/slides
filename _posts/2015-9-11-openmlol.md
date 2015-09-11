@@ -4,7 +4,15 @@
 
 ---
 
-### Nuove collezioni inseriti
+Nuovo portale di contenuti open, gratuiti e riusabili
+
+--
+
+sincronizzato con la Collezione Open all'interno di MLOL classico
+dentro MLOL+ ci sara una selezione di circa 4000 titoli
+
+---
+### Nuove collezioni inserite al 7 luglio
 
 --
 + Petrucci Music Digital Library (IMSLP): ~89000
