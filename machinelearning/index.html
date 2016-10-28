@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="it">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Machine Learning</title>
+
+		<meta name="description" content="Presentazione Machine Learning 2016">
+		<meta name="author" content="Andrea Zanni">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+            <div class="slides">
+
+                
+<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-notes="^Note:">
+<script type="text/template">
+##Open data bibliotecari
+
+Andrea Zanni 
+
+[openMLOL](http://openmlol.it)
+
+</script>
+</section>
+
+
+<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-notes="^Note:">
+<script type="text/template">
+
+Perchè gli open data sono importanti?
+
+--
+
+* connessione
+* struttura
+* modularità
+* _network effects_
+
+--
+
+sui dati ci puoi costruire sopra
+
+--
+
+_library as a platform_
+
+--
+
+* infrastruttura: servizi, dati, strumenti
+* possibilità di sviluppare nuovi servizi
+* creare _valore_ lasciando ad altri la possibilità di costruire sopra
+
+--
+
+biblioteche come piattaforme _aperte_
+
+--
+
+* essere _aperti_ a tutti
+* dare accesso ad ogni pezzo di informazioni che possiedono: contenuti digitali, metadati, il loro utilizzo, interazioni sociali attorno
+* abilitare nuovi prodotti e servizi creati da chiunque abbia un'idea
+* integrare tutto ciò che la biblioteca sa attorno all'ecosistema della Rete
+
+--
+
+* servire una comunità basata su un territorio, o su un interesse
+* visibile alle _persone_ e non solo agli sviluppatori
+
+---
+
+<!-- .slide: data-background="#ff0000" -->
+
+##API
+
+--
+
+<!-- .slide: data-background="#ff0000" -->
+
+"interagire, in tempo reale, con i dati di un sito o un servizio."
+
+--
+
+<!-- .slide: data-background="#ff0000" -->
+
+*
+
+---
+
+<!-- .slide: data-background="#1a00ff" -->
+
+##scarico del database
+
+--
+
+<!-- .slide: data-background="#1a00ff" -->
+"tutti i dati, e subito"
+
+--
+
+<!-- .slide: data-background="#1a00ff" -->
+
+* permette analisi specifiche e ad ampio raggio
+* 
+
+--
+
+<!-- .slide: data-background="#1a00ff" -->
+
+* _non_ in tempo reale
+* complessità
+* costi
+
+---
+
+<!-- .slide: data-background="#00bcff" -->
+
+##Linked Open Data
+
+--
+
+<!-- .slide: data-background="#00bcff" -->
+
+"dati aperti e collegati fra di loro e con altri dataset"
+
+--
+
+<!-- .slide: data-background="#00bcff" -->
+
+<img src="file:///home/aubrey/Dropbox/code/slides/machinelearning/5starsteps.png"></img>
+
+--
+
+<!-- .slide: data-background="#00bcff" -->
+
+<img src="file:///home/aubrey/Dropbox/code/slides/machinelearning/lodstars.jpg"></img>
+
+--
+
+###Query
+
+--
+
+"fare domande estremamente specifiche che utilizzino appieno la granularità dei dati"
+
+---
+
+##internet archive
+
+--
+
+interazione con:
+
+* risorsa singola o collezione
+* utenti
+* servizi
+
+---
+
+##WIKIDATA
+
+--
+
+"Wikipedia dei dati"
+
+--
+
+_Knowledge base_ collaborativa
+
+--
+
+dati centralizzati in un unico luogo, per tutte le Wikipedie e i progetti wiki
+
+--
+
+<!-- .slide: data-background="#ffffff" -->
+<img src="file:///home/aubrey/Dropbox/code/slides/machinelearning/wdprima.png" width="230" ></img>
+
+<img src="file:///home/aubrey/Dropbox/code/slides/machinelearning/frecciagiu.png"></img>
+
+<img src="file:///home/aubrey/Dropbox/code/slides/machinelearning/wdora.png" width="230"></img>
+
+--
+
+<!-- .slide: data-background="#ffffff" -->
+
+<img src="file:///home/aubrey/Dropbox/code/slides/machinelearning/wdstatement.jpg"></img>
+
+--
+
+###Authority control
+
+--
+
+VIAF, SBN, BNF, LOC, DNB...
+
+--
+
+"super-authority control" 
+
+--
+
+###Progetto Wikibib
+
+--
+
+Caricare su un "Wikidata locale" i dati di ISBN in Unimarc.
+
+--
+
+* connettere diversi dataset in un unico "super-catalogo"
+
+---
+
+##WIKICITE
+
+--
+
+E coi dati _transazionali_?
+
+--
+
+Quello che ci manca sono le DOMANDE
+
+---
+
+</script>
+</section>
+
+
+
+            </div>
+
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    
+                    
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
