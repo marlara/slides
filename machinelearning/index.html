@@ -68,7 +68,7 @@ Perchè gli open data sono importanti?
 * modularità <!-- .element: class="fragment" data-fragment-index="3" -->
 * analisi <!-- .element: class="fragment" data-fragment-index="4" -->
 * aggregazione <!-- .element: class="fragment" data-fragment-index="5" -->
-* visualizzione <!-- .element: class="fragment" data-fragment-index="6" -->
+* visualizzazione <!-- .element: class="fragment" data-fragment-index="6" -->
 * network effects <!-- .element: class="fragment" data-fragment-index="7" -->
 * machine learning <!-- .element: class="fragment" data-fragment-index="8" -->
 
@@ -316,17 +316,13 @@ possibilità di utilizzare _machine learning_ per "schiacciare" i record
 <!-- .slide: data-background="#8900cd" -->
 
 iniziativa per inserire su Wikidata dati bibliografici relativi alla letteratura accademica, 
-con anche le citazioni fra articoli.
+fra cui anche le citazioni fra articoli.
 
 --
 
 <!-- .slide: data-background="#ffffff" -->
 
 <iframe style="width:200vw; height:95vh;" src="https://query.wikidata.org/embed.html#%23%23defaultView%3ABubbleChart%0A%23Who%20is%20the%20most%20cited%20author%20who%20has%20published%20on%20Zika%3F%0ASELECT%20%3Fauthor%20%3FauthorLabel%20%28COUNT%28%3Fpublication%29%20AS%20%3Fcount%29%0AWHERE%0A%7B%0A%20%20%20%20%3Fitem%20wdt%3AP2860%20%3Fpublication%20.%0A%20%20%20%20%7B%20%3Fpublication%20wdt%3AP921%20wd%3AQ202864%20.%20%7D%20UNION%20%7B%20%3Fpublication%20wdt%3AP921%20wd%3AQ8071861%20.%20%7D%0A%20%20%20%20%3Fpublication%20wdt%3AP50%20%3Fauthor%20.%0A%20%20%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22%20.%0A%20%20%20%20%7D%0A%7D%0AGROUP%20BY%20%3Fauthor%20%3FauthorLabel%0AORDER%20BY%20DESC%28%3Fcount%29">
-
---
-
----> foto grafo
 
 --
 
