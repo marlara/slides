@@ -200,6 +200,12 @@ biblioteche come piattaforme _aperte_
 
 "fare domande estremamente specifiche che utilizzino appieno la granularità dei dati"
 
+--
+
+<!-- .slide: data-background="#ffffff" -->
+
+<iframe style="width:200vw; height:95vh;" scrolling="yes" frameborder="0" src="https://query.wikidata.org/embed.html#%23%20Average%20gestation%20period%20of%20genera%2C%20color-coded%20by%20order%0A%23defaultView%3ABubbleChart%0ASELECT%20%3Fgenus%20%28AVG%28%3Fperiod%29%20AS%20%3Fperiod%29%20%28SAMPLE%28%3Flabel%29%20AS%20%3FgenusLabel%29%20%28SAMPLE%28%3Frgb%29%20AS%20%3Frgb%29%0AWHERE%0A%7B%0A%20%20%7B%0A%20%20%20%20BIND%28%22en%22%20AS%20%3Flanguage%29.%0A%20%20%20%20%23%20find%20species%20with%20gestation%20period%20and%20convert%20to%20seconds%20%28SI%20base%20unit%29%0A%20%20%20%20%3Fspecies%20p%3AP3063%2Fpsv%3AP3063%20%5B%0A%20%20%20%20%20%20wikibase%3AquantityAmount%20%3FbasePeriod%3B%0A%20%20%20%20%20%20wikibase%3AquantityUnit%20%5B%0A%20%20%20%20%20%20%20%20p%3AP2370%2Fpsv%3AP2370%20%5B%0A%20%20%20%20%20%20%20%20%20%20wikibase%3AquantityAmount%20%3FunitPeriod%3B%0A%20%20%20%20%20%20%20%20%20%20wikibase%3AquantityUnit%20wd%3AQ11574%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%20%20%5D%0A%20%20%20%20%5D.%0A%20%20%20%20%23%20convert%20back%20to%20days%0A%20%20%20%20BIND%28%28%3FbasePeriod%20%2a%20%3FunitPeriod%29%2F%2860%2a60%2a24%29%20AS%20%3Fperiod%29.%0A%20%20%20%20%23%20find%20genus%0A%20%20%20%20%3Fspecies%20wdt%3AP171%2a%20%3Fgenus.%0A%20%20%20%20%3Fgenus%20wdt%3AP105%20wd%3AQ34740.%0A%20%20%20%20%23%20find%20a%20good%20label%20%E2%80%93%20trivial%20name%2C%20else%20label%2C%20else%20%E2%80%9C%3Cno%20name%3E%E2%80%9D%0A%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%3Fgenus%20wdt%3AP1843%20%3FtrivialName.%0A%20%20%20%20%20%20FILTER%28LANG%28%3FtrivialName%29%20%3D%20%3Flanguage%29.%0A%20%20%20%20%7D%0A%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%3Fgenus%20rdfs%3Alabel%20%3FgenusLabel.%0A%20%20%20%20%20%20FILTER%28LANG%28%3FgenusLabel%29%20%3D%20%3Flanguage%29.%0A%20%20%20%20%7D%0A%20%20%20%20BIND%28IF%28BOUND%28%3FtrivialName%29%2C%3FtrivialName%2CIF%28BOUND%28%3FgenusLabel%29%2C%3FgenusLabel%2C%22%3Cno%20name%3E%22%29%29%20AS%20%3Flabel%29.%0A%20%20%20%20%23%20find%20order%0A%20%20%20%20%3Fgenus%20wdt%3AP171%2a%20%3Forder.%0A%20%20%20%20%3Forder%20wdt%3AP105%20wd%3AQ36602.%0A%20%20%20%20%23%20choose%20%E2%80%9Crandom%20but%20deterministic%E2%80%9D%20color%20per%20order%3B%20you%20can%20play%20around%20with%20%22-%22%20%28can%20be%20any%20string%29%20to%20find%20a%20pleasing%20resulting%20color%20distribution%0A%20%20%20%20BIND%28UCASE%28SUBSTR%28SHA256%28CONCAT%28%22-%22%2C%20STR%28%3Forder%29%29%29%2C%200%2C%206%29%29%20AS%20%3Frgb%29.%0A%20%20%7D%0A%20%20UNION%0A%20%20%7B%0A%20%20%20%20%23%20add%20scale%0A%20%20%20%20VALUES%20%28%3Fgenus%20%3Fperiod%20%3Flabel%29%20%7B%0A%20%20%20%20%20%20%28wd%3AQ23387%207%20%22week%22%40en%29%0A%20%20%20%20%20%20%28wd%3AQ5151%2030.436875%20%22month%22%40en%29%0A%20%20%20%20%20%20%28wd%3AQ1643308%2091.310625%20%223%20months%22%40en%29%0A%20%20%20%20%20%20%28wd%3AQ2269240%20182.62125%20%226%20months%22%40en%29%0A%20%20%20%20%20%20%28wd%3AQ577%20365.2425%20%22year%22%40en%29%0A%20%20%20%20%7D%0A%20%20%20%20BIND%28%22CCCCCC%22%20AS%20%3Frgb%29.%0A%20%20%7D%0A%7D%0AGROUP%20BY%20%3Fgenus">
+
 ---
 
 <!-- .slide: data-background="#00bcff" -->
@@ -314,7 +320,9 @@ con anche le citazioni fra articoli.
 
 --
 
---> screenshot P2860
+<!-- .slide: data-background="#ffffff" -->
+
+<iframe style="width:200vw; height:95vh;" src="https://query.wikidata.org/embed.html#%23%23defaultView%3ABubbleChart%0A%23Who%20is%20the%20most%20cited%20author%20who%20has%20published%20on%20Zika%3F%0ASELECT%20%3Fauthor%20%3FauthorLabel%20%28COUNT%28%3Fpublication%29%20AS%20%3Fcount%29%0AWHERE%0A%7B%0A%20%20%20%20%3Fitem%20wdt%3AP2860%20%3Fpublication%20.%0A%20%20%20%20%7B%20%3Fpublication%20wdt%3AP921%20wd%3AQ202864%20.%20%7D%20UNION%20%7B%20%3Fpublication%20wdt%3AP921%20wd%3AQ8071861%20.%20%7D%0A%20%20%20%20%3Fpublication%20wdt%3AP50%20%3Fauthor%20.%0A%20%20%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22%20.%0A%20%20%20%20%7D%0A%7D%0AGROUP%20BY%20%3Fauthor%20%3FauthorLabel%0AORDER%20BY%20DESC%28%3Fcount%29">
 
 --
 
